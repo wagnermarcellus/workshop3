@@ -1,2 +1,2 @@
-let iens=[], preços=[]
+let itens=[], preços=[]
 
