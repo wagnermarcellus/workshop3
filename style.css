@@ -1,0 +1,13 @@
+.logo {
+    width: 100px;
+    height: auto;
+}
+.headerDoSite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2C3892;
+    padding: 20px;
+    color: white;
+    gap: 15px;
+}
