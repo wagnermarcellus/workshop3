@@ -18,22 +18,31 @@
     </header>
     <hr>
     <main id="itensLista">
-        <div class="esquerda-selecionaveis">
+        <div class="esquerda">
             <div class="AddItens">
                 <h3>Adicionar itens: </h3>
                 <input type="text" id="addItens" placeholder="Adicione os itens aqui">
+                <button onclick="">Adicionar</button>
+            </div>
+            <div class="selecionaveis">
+                <p class="nomeItem">item: </p>
+                <input type="text" id="IDnomeItem" maxlength="20" placeholder="Digite o valor do item">
+                <p class="decrição">descrição:</p>
+                <input type="text" id="IDdecrição" maxlength="20" placeholder="Digite o valor do item">
+                <p class="preço">Preço: </p>
+                <input type="number" id="IDpreço" maxlength="20" placeholder="Digite o valor do item">
             </div>
         </div>
         <br><br>
-        <div class="direita-pegos">
+        <div class="direita">
             <p>Esse itens estão no carrinho:</p>
-            <div class="excluirItem">
-                <button onclick="">Excluir</button>
+            <div class="selecionados">
+                <div class="botoesDeAcao">
+                    <button onclick="">Excluir</button>
+                    <button onclick="">Apagar Lista</button>
+                </div>
             </div>
-
-            <div class="excluirLista">
-                <button onclick="">Apagar Lista</button>
-            </div>
+            
         </div>
        
     </main>
