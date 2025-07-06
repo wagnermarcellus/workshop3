@@ -18,50 +18,57 @@
         <img src="./docs/img/logo.png" alt="Logo do Workshop" class="logo">
         <h1 id="título"> Lista de compras </h1>
     </header>
-
+   
     <main id="itensLista">
-        <div class="esquerda">
-            <div class="AddItens">
-                <h3>Adicionar itens: </h3>
-                <input type="text" id="IDnomeItem" placeholder="Digite o nome do item">
-                <input type="text" id="IDdecrição" placeholder="Digite a decrição do item">
-                <input type="text" id="IDpreço" maxlength="20" placeholder="Digite o valor do item">
+         <div id="bemVindo">
+        <h2>Lista de Compras</h2>
+        <p>Organize, Adicione itens à sua lista de compras e visualize-os aqui.</p>
+    </div>
+        <div id="osDoisDivs">
+            <div class="esquerda">
+                <div class="AddItens">
+                    <h3>Adicionar itens</h3>
+                    <input type="text" id="IDnomeItem" placeholder="Digite o nome do item">
+                    <input type="text" id="IDdecrição" placeholder="Digite a decrição do item">
+                    <input type="text" id="IDpreço" maxlength="20" placeholder="Digite o valor do item">
 
-                <button onclick="">Adicionar</button>
-            </div>
-            <br>
-            <div class="selecionaveis">
-                <h3>possivel lugar onde a lista ficara</h3>
-                <p class="nomeItem">item: </p>
-                <p class="decrição">descrição:</p>
-                <p class="preço">Preço: </p>
+                    <button onclick="adicionarItem()">Adicionar</button>
 
-            </div>
-        </div>
-        <br><br>
-        <div class="direita">
-            <p>Esse itens estão no carrinho:</p>
-            <div class="selecionados">
-                <div class="botoesDeAcao">
-                    <button onclick="">Excluir</button>
-                    <button onclick="">Apagar Lista</button>
+                </div>
+                <div class="selecionaveis">
+                    <h3>possivel lugar onde a lista ficara</h3>
+                    <p class="nomeItem">item: </p>
+                    <p class="decrição">descrição:</p>
+                    <p class="preço">Preço: </p>
+
                 </div>
             </div>
+            <br><br>
+            <div class="direita">
+                <p>Esse itens estão no carrinho:</p>
+                <div class="selecionados">
+                    <div class="botoesDeAcao">
+                        <button onclick="">Excluir</button>
+                        <button onclick="">Apagar Lista</button>
+                    </div>
+                </div>
 
+            </div>
         </div>
 
+
     </main>
-<footer>
-    <div class="footer">
-        <p>Desenvolvido por:</p>
-        <a href="https://github.com/wagnermarcellus" target="_blank">Wagner Marcellus |</a>
-        <a href="https://github.com/golbrit" target="_blank">Shadonw__7 |</a>
-        <a href="https://github.com/AnaninGames" target="_blank">MarceloGameDev |</a>
-        <a href="https://github.com/Bielzinn9" target="_blank">Bielzinn9 |</a>
-        <a href="https://github.com/adanvictorcolaco" target="_blank">Adan Victor</a>
-        <p>© 2025 - Trabalho em grupo do curso Desenvolvimento de Sistemas do SENAI São José - SC </p>
-    </div>
-</footer>
+    <footer>
+        <div class="footer">
+            <p>Desenvolvido por:</p>
+            <a href="https://github.com/wagnermarcellus" target="_blank">Wagner Marcellus |</a>
+            <a href="https://github.com/golbrit" target="_blank">Shadonw__7 |</a>
+            <a href="https://github.com/AnaninGames" target="_blank">MarceloGameDev |</a>
+            <a href="https://github.com/Bielzinn9" target="_blank">Bielzinn9 |</a>
+            <a href="https://github.com/adanvictorcolaco" target="_blank">Adan Victor</a>
+            <p>© 2025 - Trabalho em grupo do curso Desenvolvimento de Sistemas do SENAI São José - SC </p>
+        </div>
+    </footer>
 
 </body>
 
