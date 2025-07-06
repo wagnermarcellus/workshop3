@@ -196,7 +196,7 @@ input[type="number"] {
     transition: background-color 0.3s ease;
 }
 .restaurar:hover {
-    background-color: #24124d!important;
+    background-color: #008d00!important;
     color: #ffffff!important;
 }
 .limparLista {
@@ -207,6 +207,11 @@ input[type="number"] {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.limparLista:hover {
+    background-color: #7e0000 !important;
+    color: #ffffff !important;
 }
 /***FIM DO ESPAÇO DOS CLASS***/
 /***TOGGLE FONT & DARKMODE***/
