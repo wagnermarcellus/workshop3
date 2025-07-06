@@ -82,7 +82,7 @@ function renderizarItensRemovidos(){
         const div = document.createElement("div");
         div.className  =  "itensCard";
         div.innerHTML = `
-               <h3>Item #${index + 1}</h3>
+            <h3>Item #${index + 1}</h3>
             <p class="nomeItem">Nome do item: ${item.nome}</p>
             <p class="decrição">Descrição do item: ${item.descricao}</p>
             <p class="preço">Preço do item: ${item.preco.toFixed(2)} R$</p>
@@ -129,13 +129,26 @@ function carregarItems(){
 
 function limparLista(){
     if (itens.length === 0){
-        alert("A list já está vazia.");
+        alert("A lista já está vazia.");
         return;
     }
 
     if (confirm("Tem certeza que deseja mover todos os itens para os removidos?")){
         itensRemovidos = itensRemovidos.concat(itens);
         itens = [];
+        salvarItens();
+        renderizarItens();
+    }
+}
+
+function limparListaRemovidos(){
+    if (itensRemovidos.length === 0){
+        alert("A lista de removidos já está vazia.");
+        return;
+    }
+
+    if (confirm("Tem certeza que deseja mover todos os itens")){
+        itensRemovidos = [];
         salvarItens();
         renderizarItens();
     }
