@@ -155,6 +155,7 @@ input[type="number"] {
     gap: 10px;
 }
 .itensCard {
+    display: flex;
     background: #f7f8fa;
     border: 2px solid #e0e3eb;
     border-radius: 16px;
@@ -163,6 +164,20 @@ input[type="number"] {
     margin-top: 18px;
     margin-bottom: 18px;
     transition: box-shadow 0.2s, border-color 0.2s;
+}
+.itemImage {
+    width: 50%;
+    border-radius: 12px;
+    background-color: #e0e3eb;
+    justify-content: center;
+    align-items: center;
+}
+.itemIMG {
+    border-radius: 12px;
+    margin-right: 16px;
+    align-self: center;
+    min-width: 120px;
+    
 }
 
 .itensCard h3 {
@@ -177,7 +192,6 @@ input[type="number"] {
     font-size: 1rem;
     margin: 6px 0;
     padding: 6px 0 6px 8px;
-    border-left: 3px solid #FFAE00;
     background: #fff;
     border-radius: 6px;
 }
@@ -212,6 +226,13 @@ input[type="number"] {
 .limparLista:hover {
     background-color: #7e0000 !important;
     color: #ffffff !important;
+}
+.preço {
+    color: #2C3892;
+    font-weight: 600;
+    font-size: 20px !important;
+    margin-top: 8px;
+
 }
 /***FIM DO ESPAÇO DOS CLASS***/
 /***TOGGLE FONT & DARKMODE***/
@@ -294,6 +315,13 @@ input[type="number"] {
 .pacifico-on .itensCard:hover {
 box-shadow: 0 4px 18px 0 #ffae0081 ;
 border-color: #FFAE00 !important;
+}
+.pacifico-on .itemImage {
+    width: 50%;
+    border-radius: 12px;
+    background-color: #7c3aed13;
+    justify-content: center;
+    align-items: center;
 }
 /***FIM DO TOGGLE FONT & DARKMODE***/
 /***RESPONSIVO***/

@@ -56,13 +56,20 @@ function renderizarItens()
         const div = document.createElement("div");
         div.className  =  "itensCard";
         div.innerHTML = `
-               <h3>Item #${index + 1}</h3>
-            <p class="nomeItem">Nome do item: ${item.nome}</p>
-            <p class="decrição">Descrição do item: ${item.descricao}</p>
-            <p class="preço">Preço do item: ${item.preco.toFixed(2)} R$</p>
-            <button class="removerItem" onclick="removerItem(${index})">Remover Item</button>
+           
+
+            <div class="itemIMG">
+                            <img src="./docs/img/item-img.png" alt="Imagem do Item" class="itemImage">
+
+                        </div>
+                        <div class="itemDetalhes">
+                            <h3 id="numeracaoDoitem">Item #${index + 1}</h3>
+                            <p class="nomeItem">${item.nome}</p>
+                            <p class="decrição">${item.descricao}</p>
+                            <p class="preço">${item.preco.toFixed(2)} R$</p>
+                            <button class="removerItem" onclick="removerItem(${index})">Remover Item</button>
             <button class="restaurar" onclick="EditarItem(${index})">Editar</button>
-        
+                        </div>
         `;
        container.appendChild(div);
     });
@@ -83,13 +90,19 @@ function renderizarItensRemovidos(){
         const div = document.createElement("div");
         div.className  =  "itensCard";
         div.innerHTML = `
-            <h3>Item #${index + 1}</h3>
-            <p class="nomeItem">Nome do item: ${item.nome}</p>
-            <p class="decrição">Descrição do item: ${item.descricao}</p>
-            <p class="preço">Preço do item: ${item.preco.toFixed(2)} R$</p>
-            <button class="restaurar" onclick="restaurarItem(${index})">Restaurar Item</button>
-            <button class="limparLista" onclick="removerItemPer(${index})">Remover</button>
-        
+
+            <div class="itemIMG">
+                            <img src="./docs/img/item-img.png" alt="Imagem do Item" class="itemImage">
+
+                        </div>
+                        <div class="itemDetalhes">
+                            <h3 id="numeracaoDoitem">Item #${index + 1}</h3>
+                            <p class="nomeItem">${item.nome}</p>
+                            <p class="decrição">${item.descricao}</p>
+                            <p class="preço">${item.preco.toFixed(2)} R$</p>
+                            <button class="restaurar" onclick="restaurarItem(${index})">Restaurar Item</button>
+                            <button class="limparLista" onclick="removerItemPer(${index})">Remover</button>
+                        </div>
         `;
        container.appendChild(div);
     });

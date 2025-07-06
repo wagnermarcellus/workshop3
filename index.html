@@ -7,7 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://raw.githubusercontent.com/wagnermarcellus/workshop3/refs/heads/main/docs/img/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="icon"
+        href="https://raw.githubusercontent.com/wagnermarcellus/workshop3/refs/heads/main/docs/img/favicon_io/favicon.ico"
+        type="image/x-icon">
     <script src="script.js"></script>
     <title>Lista de Compras - Workshop</title>
 
@@ -42,20 +44,30 @@
                     <p>Veja abaixo os itens que você adicionou à sua lista de compras.</p>
                     <button onclick="limparLista()" class="limparLista">Limpar Lista</button>
                     <!-- Vamos criar uma função chamada limparLista() que será responsável por limpar a lista de itens adicionados. -->
-                    <div class="itensCard">
-                        <h3 id="numeracaoDoitem">Numeração do Item</h3>
-                        <p class="nomeItem">Nome do item: </p>
-                        <p class="decrição">descrição do item: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Beatae, molestiae, neque voluptates veniam qui dolores voluptas perspiciatis voluptatem amet
-                            harum dolorem earum fuga omnis facere iusto aliquid, facilis voluptatum debitis!</p>
-                        <p class="preço">Preço do item: 16R$</p>
+                    <!-- <div class="itensCard">
+                        <div class="itemIMG">
+                            <img src="./docs/img/item-img.png" alt="Imagem do Item" class="itemImage">
 
-                    </div>
+                        </div>
+                        <div class="itemDetalhes">
+                            <h3 id="numeracaoDoitem">Numeração do Item</h3>
+                            <p class="nomeItem">Nome do item: </p>
+                            <p class="decrição">descrição do item: Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Beatae, molestiae, neque voluptates veniam qui dolores voluptas perspiciatis voluptatem
+                                amet
+                                harum dolorem earum fuga omnis facere iusto aliquid, facilis voluptatum debitis!</p>
+                            <p class="preço">Preço do item: 16R$</p>
+                        </div>
+
+
+                    </div> -->
                 </div>
 
             </div>
             <br><br>
             <div class="direita">
+
                 <h2>Os itens removidos</h2>
                 <div class="divDosItensRemovidos">
                     <div class="itensCard">
@@ -69,7 +81,7 @@
                     <button class="restaurar">Restaurar Item</button>
 
                 </div>
-                    <button onclick="limparListaRemovidos()" class="limparLista">Limpar Lista</button>
+                <button onclick="limparListaRemovidos()" class="limparLista">Limpar Lista</button>
             </div>
 
 
