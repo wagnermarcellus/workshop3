@@ -1,3 +1,4 @@
+/***PROPRIEDADES PADRÃO***/
 *{    margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,6 +9,18 @@ a {
     text-decoration: none;
     color: #FFAE00;
 }
+button {
+    background-color: #2C3892;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #FFAE00;
+} 
 /***ESPAÇO DOS DIV***/
 #itensLista {
     display: flex;
