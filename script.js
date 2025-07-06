@@ -11,7 +11,132 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.classList.remove('pacifico-on');
         }
     });
+
+    carregarItems();
 });
 /////////////////Fim do Ativar/Desativar estilo artístico com botão/////////////////
-let itens=[], precos=[]
+let itens = JSON.parse(localStorage.getItem("itens")) || [];
+let itensRemovidos = JSON.parse(localStorage.getItem("itensRemovidos")) || [];
 
+
+
+function salvarItens() {
+    localStorage.setItem("itens", JSON.stringify(itens));
+    localStorage.setItem("itensRemovidos", JSON.stringify(itensRemovidos));
+}
+
+function adicionarItem()
+{
+  const nome = document.getElementById("IDnomeItem").value.trim();
+  const descricao = document.getElementById("IDdecrição").value.trim();
+  const preco = parseFloat(document.getElementById("IDpreço").value);
+
+  if (nome === "" || descricao === "" || isNaN(preco)){
+    alert("Preencha todos os campos corretamente!");
+    return;
+  }
+
+  const item = {nome, descricao, preco}
+
+  itens.push(item);
+
+  renderizarItens();
+  limparCampos();
+  salvarItens();
+}
+
+function renderizarItens()
+{
+    const container = document.querySelector(".divDosItensAdicionados");
+
+    const cardsExitentes = container.querySelectorAll(".itensCard:not(:first-child)");
+    cardsExitentes.forEach(card => card.remove());
+
+    itens.forEach((item, index) => {
+        const div = document.createElement("div");
+        div.className  =  "itensCard";
+        div.innerHTML = `
+               <h3>Item #${index + 1}</h3>
+            <p class="nomeItem">Nome do item: ${item.nome}</p>
+            <p class="decrição">Descrição do item: ${item.descricao}</p>
+            <p class="preço">Preço do item: ${item.preco.toFixed(2)} R$</p>
+            <button class="removerItem" onclick="removerItem(${index})">Remover Item</button>
+        
+        `;
+       container.appendChild(div);
+    });
+
+    renderizarItensRemovidos();
+}
+
+function renderizarItensRemovidos(){
+    const container = document.querySelector(".divDosItensRemovidos");
+    container.innerHTML = "";
+
+    if (itensRemovidos.length === 0){
+    container.innerHTML = "<p>Nenhum item removido.</p>";
+    return;
+    }
+
+    itensRemovidos.forEach((item, index) => {
+        const div = document.createElement("div");
+        div.className  =  "itensCard";
+        div.innerHTML = `
+               <h3>Item #${index + 1}</h3>
+            <p class="nomeItem">Nome do item: ${item.nome}</p>
+            <p class="decrição">Descrição do item: ${item.descricao}</p>
+            <p class="preço">Preço do item: ${item.preco.toFixed(2)} R$</p>
+            <button class="restaurar" onclick="restaurarItem(${index})">Restaurar Item</button>
+            <button class="removerDeVez" onclick="removerItemPer(${index})">Remover</button>
+        
+        `;
+       container.appendChild(div);
+    });
+}
+
+function limparCampos()
+{
+  document.getElementById("IDnomeItem").value = "";
+  document.getElementById("IDdecrição").value = "";
+  document.getElementById("IDpreço").value = "";
+}
+
+function removerItem(index)
+{
+    const itemRemovido = itens.splice(index, 1)[0];
+    itensRemovidos.push(itemRemovido);
+    salvarItens();
+    renderizarItens();
+}
+
+function removerItemPer(index)
+{
+    itensRemovidos.splice(index, 1)[0];
+    salvarItens();
+    renderizarItens();
+}
+
+function restaurarItem(index){
+    const itemRestaurado = itensRemovidos.splice(index, 1)[0];
+    itens.push(itemRestaurado);
+    salvarItens();
+    renderizarItens();
+}
+
+function carregarItems(){
+    renderizarItens();
+}
+
+function limparLista(){
+    if (itens.length === 0){
+        alert("A list já está vazia.");
+        return;
+    }
+
+    if (confirm("Tem certeza que deseja mover todos os itens para os removidos?")){
+        itensRemovidos = itensRemovidos.concat(itens);
+        itens = [];
+        salvarItens();
+        renderizarItens();
+    }
+}
