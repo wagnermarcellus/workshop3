@@ -59,7 +59,7 @@ function renderizarItens()
            
 
             <div class="itemIMG">
-                            <img src="./docs/img/item-img.png" alt="Imagem do Item" class="itemImage">
+                            <img src="https://i.ibb.co/xtkKTh6P/item-img.png" alt="Imagem do Item" class="itemImage">
 
                         </div>
                         <div class="itemDetalhes">
