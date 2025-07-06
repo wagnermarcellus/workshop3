@@ -15,16 +15,16 @@
 
 <body>
     <header class="headerDoSite">
-    <img src="./docs/img/logo.png" alt="Logo do Workshop" class="logo">
-    <h1 id="título"> Lista de compras </h1>
-    <button id="toggleFont" class="toggle-font-btn" title="Ativar/Desativar estilo artístico">🎨</button>
-</header>
-   
+        <img src="./docs/img/logo.png" alt="Logo do Workshop" class="logo">
+        <h1 id="título"> Lista de compras </h1>
+        <button id="toggleFont" class="toggle-font-btn" title="Ativar/Desativar estilo artístico">🎨</button>
+    </header>
+
     <main id="itensLista">
-         <div id="bemVindo">
-        <h2>Lista de Compras</h2>
-        <p>Organize, Adicione itens à sua lista de compras e visualize-os aqui.</p>
-    </div>
+        <div id="bemVindo">
+            <h2>Lista de Compras</h2>
+            <p>Organize, Adicione itens à sua lista de compras e visualize-os aqui.</p>
+        </div>
         <div id="osDoisDivs">
             <div class="esquerda">
                 <div class="AddItens">
@@ -36,26 +36,41 @@
                     <button onclick="adicionarItem()">Adicionar</button>
                     <!-- Vamos criar uma função chamada adicionarItem() que será responsável por adicionar os itens à lista. -->
                 </div>
-                <div class="selecionaveis">
-                    <h3>possivel lugar onde a lista ficara</h3>
-                    <p class="nomeItem">item: </p>
-                    <p class="decrição">descrição:</p>
-                    <p class="preço">Preço: </p>
+                <hr>
+                <div class="divDosItensAdicionados">
+                    <h2>Itens Adicionados</h2>
+                    <p>Veja abaixo os itens que você adicionou à sua lista de compras.</p>
+                    <button onclick="limparLista()" class="limparLista">Limpar Lista</button>
+                    <!-- Vamos criar uma função chamada limparLista() que será responsável por limpar a lista de itens adicionados. -->
+                    <div class="itensCard">
+                        <h3 id="numeracaoDoitem">Numeração do Item</h3>
+                        <p class="nomeItem">Nome do item: </p>
+                        <p class="decrição">descrição do item: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Beatae, molestiae, neque voluptates veniam qui dolores voluptas perspiciatis voluptatem amet
+                            harum dolorem earum fuga omnis facere iusto aliquid, facilis voluptatum debitis!</p>
+                        <p class="preço">Preço do item: 16R$</p>
 
-                </div>
-            </div>
-            <br><br>
-            <div class="direita">
-                <p>Esse itens estão no carrinho:</p>
-                <div class="selecionados">
-                    <div class="botoesDeAcao">
-                        <button onclick="">Excluir</button>
-                        <button onclick="">Apagar Lista</button>
                     </div>
                 </div>
 
             </div>
-        </div>
+            <br><br>
+            <div class="direita">
+                <h2>Os itens removidos</h2>
+                <div class="divDosItensRemovidos">
+
+                    <div class="itensCard">
+                        <h3 id="numeracaoDoitem">Numeração do Item</h3>
+                        <p class="nomeItem">Nome do item: </p>
+                        <p class="decrição">descrição do item: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Illum minima omnis earum aliquid rem voluptatem temporibus nihil, non officia vero facere
+                            velit veritatis doloribus sint numquam modi! Mollitia, sunt error?</p>
+                        <p class="preço">Preço do item: 16R$</p>
+                    </div>
+                    <button class="restaurar">Restaurar Item</button>
+
+                </div>
+            </div>
 
 
     </main>
