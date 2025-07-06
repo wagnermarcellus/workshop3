@@ -61,6 +61,7 @@ function renderizarItens()
             <p class="decrição">Descrição do item: ${item.descricao}</p>
             <p class="preço">Preço do item: ${item.preco.toFixed(2)} R$</p>
             <button class="removerItem" onclick="removerItem(${index})">Remover Item</button>
+            <button class="restaurar" onclick="EditarItem(${index})">Editar</button>
         
         `;
        container.appendChild(div);
@@ -107,6 +108,51 @@ function removerItem(index)
     itensRemovidos.push(itemRemovido);
     salvarItens();
     renderizarItens();
+}
+
+
+function EditarItem(index) {
+    const item = itens[index]; 
+    
+    document.getElementById("IDnomeItem").value = item.nome;
+    document.getElementById("IDdecrição").value = item.descricao;
+    document.getElementById("IDpreço").value = item.preco;
+
+    const botaoAdicionar = document.querySelector('.AddItens button');
+    botaoAdicionar.style.display = "none";
+
+    let botaoEditar = document.getElementById("botaoEditar");
+    if (!botaoEditar) {
+        botaoEditar = document.createElement("button");
+        botaoEditar.id = "botaoEditar";
+        botaoEditar.textContent = "Salvar Edição";
+        botaoEditar.className = "btn btn-warning";
+        document.querySelector('.AddItens').appendChild(botaoEditar);
+    }
+
+    botaoEditar.onclick = function () {
+        const novoNome = document.getElementById("IDnomeItem").value.trim();
+        const novaDescricao = document.getElementById("IDdecrição").value.trim();
+        const novoPreco = parseFloat(document.getElementById("IDpreço").value);
+
+        if (novoNome === "" || novaDescricao === "" || isNaN(novoPreco)) {
+            alert("Preencha todos os campos corretamente!");
+            return;
+        }
+
+        itens[index] = {
+            nome: novoNome,
+            descricao: novaDescricao,
+            preco: novoPreco
+        };
+
+        salvarItens();
+        renderizarItens();
+        limparCampos();
+
+        botaoEditar.remove();
+        botaoAdicionar.style.display = "inline-block";
+    };
 }
 
 function removerItemPer(index)
