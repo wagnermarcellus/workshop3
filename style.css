@@ -323,6 +323,14 @@ border-color: #FFAE00 !important;
     justify-content: center;
     align-items: center;
 }
+@media (max-width: 900px) {
+.pacifico-on .itemImage {
+        width: 900px;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
 /***FIM DO TOGGLE FONT & DARKMODE***/
 /***RESPONSIVO***/
 @media (max-width: 900px) {

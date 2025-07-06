@@ -101,7 +101,7 @@ function renderizarItensRemovidos(){
                             <p class="decrição">${item.descricao}</p>
                             <p class="preço">${item.preco.toFixed(2)} R$</p>
                             <button class="restaurar" onclick="restaurarItem(${index})">Restaurar Item</button>
-                            <button class="limparLista" onclick="removerItemPer(${index})">Remover</button>
+                            <button class="limparLista" onclick="removerItemPer(${index})">Apagar</button>
                         </div>
         `;
        container.appendChild(div);
