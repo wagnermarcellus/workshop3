@@ -24,6 +24,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 5px;
 }
 
 button:hover {
@@ -234,6 +235,58 @@ input[type="number"] {
     margin-top: 8px;
 
 }
+.nomeItem {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2C3892;
+    margin-bottom: 6px;
+    text-transform: capitalize;
+}
+.decrição {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    text-transform: capitalize;
+
+}
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0);}
+    to { opacity: 0; transform: translateY(20px);}
+}
+.hidden {
+    display: none !important;
+}
+.divDosItensRemovidos .itensCard {
+    opacity: 0.5;
+    filter: grayscale(0.7) blur(0.5px);
+    transform: scale(0.97);
+    transition: 
+        opacity 0.3s,
+        filter 0.3s,
+        transform 0.3s;
+    background: #f3f3f3;
+    border-style: dashed;
+    border-color: #aaa;
+}
+
+.divDosItensRemovidos .itensCard:hover {
+    opacity: 0.8;
+    filter: grayscale(0.3) blur(0px);
+    transform: scale(1.01);
+    border-color: #FFAE00;
+}
+
 /***FIM DO ESPAÇO DOS CLASS***/
 /***TOGGLE FONT & DARKMODE***/
 .toggle-font-btn {
@@ -447,3 +500,97 @@ border-color: #FFAE00 !important;
     }
 }
 /***FIM DO RESPONSIVO***/
+/***Lógica de estilo dinâmico***/
+.divDosItensAdicionados {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Quando .direita está oculto, use grid para 3 colunas */
+#osDoisDivs:not(:has(.direita:not(.hidden))) .divDosItensAdicionados {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Responsivo: 2 colunas em telas médias, 1 coluna no mobile */
+@media (max-width: 900px) {
+    #osDoisDivs:not(:has(.direita:not(.hidden))) .divDosItensAdicionados {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    #osDoisDivs:not(:has(.direita:not(.hidden))) .divDosItensAdicionados {
+        grid-template-columns: 1fr;
+    }
+}
+/**/
+.esquerda-classica {
+    max-width: 400px;
+    margin: 40px auto 0 auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px 0 rgba(44,56,146,0.10);
+    padding: 32px 28px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition:
+        max-width 0.5s cubic-bezier(.4,2,.6,1),
+        margin 0.5s cubic-bezier(.4,2,.6,1),
+        padding 0.5s cubic-bezier(.4,2,.6,1),
+        box-shadow 0.5s cubic-bezier(.4,2,.6,1),
+        background 0.5s cubic-bezier(.4,2,.6,1);
+}
+.esquerda-classica .AddItens {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 14px;
+}
+.esquerda-classica input[type="text"],
+.esquerda-classica input[type="number"] {
+    width: 100%;
+    max-width: 260px;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin: 0 auto 10px auto;
+    box-shadow: 0 1px 4px 0 #e0e3eb;
+    border: 1.5px solid #e0e3eb;
+    background: #f7f8fa;
+    transition: border-color 0.2s;
+}
+.esquerda-classica input[type="text"]:focus,
+.esquerda-classica input[type="number"]:focus {
+    border-color: #2C3892;
+}
+.esquerda-classica .AddItens h3 {
+    font-family: 'Georgia', serif;
+    font-size: 1.3rem;
+    color: #2C3892;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+.esquerda-classica .AddItens button {
+    width: 100%;
+    max-width: 180px;
+    margin: 12px auto 0 auto;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    background: #2C3892;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px 0 #2C389220;
+    transition: background 0.2s;
+}
+.esquerda-classica hr {
+    width: 100%;
+    max-width: 320px;
+    margin: 24px auto 18px auto;
+    border: none;
+    border-top: 1.5px solid #e0e3eb;
+}
+/***FIM DA LÓGICA DE ESTILO DINÂMICO***/

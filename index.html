@@ -24,25 +24,32 @@
 
     <main id="itensLista">
         <div id="bemVindo">
-            <h2>Lista de Compras</h2>
+            <h1>Lista de Compras</h1>
             <p>Organize, Adicione itens à sua lista de compras e visualize-os aqui.</p>
         </div>
         <div id="osDoisDivs">
             <div class="esquerda">
                 <div class="AddItens">
-                    <h3>Adicionar itens</h3>
+                    <h2>Adicionar itens</h2>
+                    <label for="IDnomeItem">Nome do Item</label>
                     <input type="text" id="IDnomeItem" placeholder="Digite o nome do item">
+                    <label for="IDdecrição">Descrição</label>
                     <input type="text" id="IDdecrição" placeholder="Digite a decrição do item">
+                    <label for="IDpreço">Preço</label>
                     <input type="number" id="IDpreço" maxlength="20" placeholder="Digite o valor do item">
 
                     <button onclick="adicionarItem()">Adicionar</button>
                     <!-- Vamos criar uma função chamada adicionarItem() que será responsável por adicionar os itens à lista. -->
                 </div>
                 <hr>
-                <div class="divDosItensAdicionados">
-                    <h2>Itens Adicionados</h2>
+                
+                    <div class="textoDosItensAdicionados">
+                        <h2>Itens Adicionados</h2>
                     <p>Veja abaixo os itens que você adicionou à sua lista de compras.</p>
                     <button onclick="limparLista()" class="limparLista">Limpar Lista</button>
+                    <div class="divDosItensAdicionados">
+                    </div>
+                    
                     <!-- Vamos criar uma função chamada limparLista() que será responsável por limpar a lista de itens adicionados. -->
                     <!-- <div class="itensCard">
                         <div class="itemIMG">
