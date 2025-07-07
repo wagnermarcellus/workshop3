@@ -30,10 +30,12 @@ button {
 button:hover {
     background-color: #FFAE00;
 }
+
 ::selection {
     background-color: #FFAE00;
     color: #2C3892;
 }
+
 input[type="text"],
 input[type="number"] {
     width: 100%;
@@ -67,6 +69,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
     appearance: textfield;
 }
+
 /***FIM DAS PROPRIEDADES PADRÃO***/
 /***ESPAÇO DOS DIV***/
 #itensLista {
@@ -76,8 +79,8 @@ input[type="number"] {
     padding: 4%;
     background-color: #f0f0f0;
     backdrop-filter: blur(5px);
-    
-    
+
+
 }
 
 #bemVindo {
@@ -126,7 +129,7 @@ input[type="number"] {
     border-radius: 25px;
     padding: 20px;
     overflow: auto;
-    
+
 }
 
 .direita {
@@ -155,6 +158,7 @@ input[type="number"] {
     align-items: center;
     gap: 10px;
 }
+
 .itensCard {
     display: flex;
     background: #f7f8fa;
@@ -166,6 +170,7 @@ input[type="number"] {
     margin-bottom: 18px;
     transition: box-shadow 0.2s, border-color 0.2s;
 }
+
 .itemImage {
     width: 50%;
     border-radius: 12px;
@@ -173,12 +178,13 @@ input[type="number"] {
     justify-content: center;
     align-items: center;
 }
+
 .itemIMG {
     border-radius: 12px;
     margin-right: 16px;
     align-self: center;
     min-width: 120px;
-    
+
 }
 
 .itensCard h3 {
@@ -201,6 +207,7 @@ input[type="number"] {
     box-shadow: 0 4px 18px 0 rgba(44, 56, 146, 0.16);
     border-color: #FFAE00;
 }
+
 .restaurar {
     background-color: #FFAE00 !important;
     color: #24124d !important;
@@ -210,10 +217,12 @@ input[type="number"] {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .restaurar:hover {
-    background-color: #008d00!important;
-    color: #ffffff!important;
+    background-color: #008d00 !important;
+    color: #ffffff !important;
 }
+
 .limparLista {
     background-color: #ff0000 !important;
     color: #ffffff !important;
@@ -228,6 +237,7 @@ input[type="number"] {
     background-color: #7e0000 !important;
     color: #ffffff !important;
 }
+
 .preço {
     color: #2C3892;
     font-weight: 600;
@@ -235,6 +245,7 @@ input[type="number"] {
     margin-top: 8px;
 
 }
+
 .nomeItem {
     font-size: 1.2rem;
     font-weight: 600;
@@ -242,6 +253,7 @@ input[type="number"] {
     margin-bottom: 6px;
     text-transform: capitalize;
 }
+
 .decrição {
     font-size: 1rem;
     color: #555;
@@ -250,28 +262,48 @@ input[type="number"] {
     text-transform: capitalize;
 
 }
+
 .fade-in {
     animation: fadeIn 0.5s forwards;
 }
+
 .fade-out {
     animation: fadeOut 0.5s forwards;
 }
+
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px);}
-    to { opacity: 1; transform: translateY(0);}
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
 @keyframes fadeOut {
-    from { opacity: 1; transform: translateY(0);}
-    to { opacity: 0; transform: translateY(20px);}
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 }
+
 .hidden {
     display: none !important;
 }
+
 .divDosItensRemovidos .itensCard {
     opacity: 0.5;
     filter: grayscale(0.7) blur(0.5px);
     transform: scale(0.97);
-    transition: 
+    transition:
         opacity 0.3s,
         filter 0.3s,
         transform 0.3s;
@@ -301,18 +333,21 @@ input[type="number"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px 0 rgba(44,56,146,0.10);
+    box-shadow: 0 2px 8px 0 rgba(44, 56, 146, 0.10);
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
 }
+
 .toggle-font-btn:hover {
     background: #2C3892;
     color: #FFAE00;
 }
+
 /****/
 .pacifico-on * {
     font-family: 'Indie Flower', cursive !important;
 }
+
 .pacifico-on {
     background: #1a1333 !important;
     color: #7cf6ff !important;
@@ -349,10 +384,12 @@ input[type="number"] {
 .pacifico-on a {
     color: #7cf6ff !important;
 }
+
 .pacifico-on #itensLista {
     background-color: #24124d !important;
     backdrop-filter: blur(5px);
 }
+
 .pacifico-on .itensCard {
     background: #2d1a5a !important;
     border-color: #7c3aed !important;
@@ -365,10 +402,12 @@ input[type="number"] {
     background: #24124d !important;
     border-left: 3px solid #7c3aed !important;
 }
+
 .pacifico-on .itensCard:hover {
-box-shadow: 0 4px 18px 0 #ffae0081 ;
-border-color: #FFAE00 !important;
+    box-shadow: 0 4px 18px 0 #ffae0081;
+    border-color: #FFAE00 !important;
 }
+
 .pacifico-on .itemImage {
     width: 50%;
     border-radius: 12px;
@@ -376,14 +415,16 @@ border-color: #FFAE00 !important;
     justify-content: center;
     align-items: center;
 }
+
 @media (max-width: 900px) {
-.pacifico-on .itemImage {
+    .pacifico-on .itemImage {
         width: 900px;
         max-width: 100%;
         height: auto;
         margin: 0 auto;
     }
 }
+
 /***FIM DO TOGGLE FONT & DARKMODE***/
 /***RESPONSIVO***/
 @media (max-width: 900px) {
@@ -397,6 +438,7 @@ border-color: #FFAE00 !important;
         min-width: 0;
         max-width: 100%;
     }
+
     .itemIMG {
         min-width: 0;
         margin-right: 0;
@@ -404,33 +446,40 @@ border-color: #FFAE00 !important;
         display: flex;
         justify-content: center;
     }
+
     .itemImage {
         width: 900px;
         max-width: 100%;
         height: auto;
         margin: 0 auto;
     }
+
     .itemDetalhes {
         padding: 0;
         text-align: left;
     }
+
     .itensCard h3,
     .itensCard p {
         font-size: 1rem;
         word-break: break-word;
     }
+
     /**/
     #osDoisDivs {
         flex-direction: column;
         gap: 16px;
     }
-    .esquerda, .direita {
+
+    .esquerda,
+    .direita {
         min-width: 0;
         width: 100%;
         margin: 0;
         border-radius: 18px;
         padding: 14px;
     }
+
     .headerDoSite {
         flex-direction: column;
         align-items: center;
@@ -440,25 +489,30 @@ border-color: #FFAE00 !important;
         min-height: unset;
         border-radius: 0 0 18px 18px;
     }
+
     .logo {
         width: 90px;
         margin: 0;
     }
+
     #título {
         font-size: 1.4rem;
         padding: 0;
         text-align: center;
         margin: 0;
     }
+
     .toggle-font-btn {
         align-self: center;
         margin: 0;
         margin-top: 4px;
     }
+
     #itensLista {
         padding: 2%;
         height: auto;
     }
+
     .footer {
         padding: 12px;
         font-size: 0.95rem;
@@ -474,31 +528,38 @@ border-color: #FFAE00 !important;
         gap: 8px;
         min-height: unset;
         border-radius: 0 0 18px 18px;
-        box-shadow: 0 2px 8px 0 rgba(44,56,146,0.10);
+        box-shadow: 0 2px 8px 0 rgba(44, 56, 146, 0.10);
     }
+
     .logo {
         width: 70px;
         margin: 0;
     }
+
     #título {
         font-size: 1.1rem;
         text-align: center;
         margin: 0;
         padding: 0;
     }
+
     .toggle-font-btn {
         align-self: center;
         margin: 0;
         margin-top: 4px;
     }
+
     .footer {
         font-size: 0.85rem;
     }
-    input[type="text"], input[type="number"] {
+
+    input[type="text"],
+    input[type="number"] {
         font-size: 0.98rem;
         padding: 10px 8px;
     }
 }
+
 /***FIM DO RESPONSIVO***/
 /***Lógica de estilo dinâmico***/
 .divDosItensAdicionados {
@@ -520,35 +581,39 @@ border-color: #FFAE00 !important;
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (max-width: 600px) {
     #osDoisDivs:not(:has(.direita:not(.hidden))) .divDosItensAdicionados {
         grid-template-columns: 1fr;
     }
 }
+
 /**/
 .esquerda-classica {
     max-width: 400px;
     margin: 40px auto 0 auto;
     background: #fff;
     border-radius: 18px;
-    box-shadow: 0 4px 32px 0 rgba(44,56,146,0.10);
+    box-shadow: 0 4px 32px 0 rgba(44, 56, 146, 0.10);
     padding: 32px 28px 28px 28px;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition:
-        max-width 0.5s cubic-bezier(.4,2,.6,1),
-        margin 0.5s cubic-bezier(.4,2,.6,1),
-        padding 0.5s cubic-bezier(.4,2,.6,1),
-        box-shadow 0.5s cubic-bezier(.4,2,.6,1),
-        background 0.5s cubic-bezier(.4,2,.6,1);
+        max-width 0.5s cubic-bezier(.4, 2, .6, 1),
+        margin 0.5s cubic-bezier(.4, 2, .6, 1),
+        padding 0.5s cubic-bezier(.4, 2, .6, 1),
+        box-shadow 0.5s cubic-bezier(.4, 2, .6, 1),
+        background 0.5s cubic-bezier(.4, 2, .6, 1);
 }
+
 .esquerda-classica .AddItens {
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
     gap: 14px;
 }
+
 .esquerda-classica input[type="text"],
 .esquerda-classica input[type="number"] {
     width: 100%;
@@ -562,10 +627,12 @@ border-color: #FFAE00 !important;
     background: #f7f8fa;
     transition: border-color 0.2s;
 }
+
 .esquerda-classica input[type="text"]:focus,
 .esquerda-classica input[type="number"]:focus {
     border-color: #2C3892;
 }
+
 .esquerda-classica .AddItens h3 {
     font-family: 'Georgia', serif;
     font-size: 1.3rem;
@@ -573,6 +640,7 @@ border-color: #FFAE00 !important;
     margin-bottom: 12px;
     letter-spacing: 1px;
 }
+
 .esquerda-classica .AddItens button {
     width: 100%;
     max-width: 180px;
@@ -586,6 +654,7 @@ border-color: #FFAE00 !important;
     box-shadow: 0 2px 8px 0 #2C389220;
     transition: background 0.2s;
 }
+
 .esquerda-classica hr {
     width: 100%;
     max-width: 320px;
@@ -593,4 +662,5 @@ border-color: #FFAE00 !important;
     border: none;
     border-top: 1.5px solid #e0e3eb;
 }
+
 /***FIM DA LÓGICA DE ESTILO DINÂMICO***/
