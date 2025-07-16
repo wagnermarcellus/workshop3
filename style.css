@@ -430,7 +430,7 @@ input[type="number"] {
 @media (max-width: 900px) {
     .itensCard {
         flex-direction: unset;
-        gap: 75px;
+        gap: 65px;
         align-items: stretch;
         padding: 10px 6px;
         margin-top: 12px;
@@ -526,7 +526,7 @@ input[type="number"] {
         align-items: center;
         justify-content: center;
         padding: 14px 6px 10px 6px;
-        gap: 75px;
+        gap: 65px;
         min-height: unset;
         border-radius: 0 0 18px 18px;
         box-shadow: 0 2px 8px 0 rgba(44, 56, 146, 0.10);
