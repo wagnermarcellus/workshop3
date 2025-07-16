@@ -429,7 +429,8 @@ input[type="number"] {
 /***RESPONSIVO***/
 @media (max-width: 900px) {
     .itensCard {
-        flex-direction: column;
+        flex-direction: unset;
+        gap: 75px;
         align-items: stretch;
         padding: 10px 6px;
         margin-top: 12px;
